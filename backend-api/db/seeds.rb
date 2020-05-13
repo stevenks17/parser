@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+graph1 = {
+    name: "National Syndromic Surveillance Program (NSSP): Emergency Department Visits Percentage of Visits for COVID-19-Like Illness  September 29, 2019 - April 4, 2020 Data as of April 9, 2020",
+    info_url: "https://www.cdc.gov/coronavirus/2019-ncov/covid-data/covidview/04102020/nssp-regions.html",
+    screenshot_url: "https://www.cdc.gov/coronavirus/2019-ncov/covid-data/covidview/04102020/covid-like-illness.png"
+}
+
+graph1 = Graph.new(graph1)
+
+graph1.save
