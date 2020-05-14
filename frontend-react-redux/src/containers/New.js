@@ -1,3 +1,4 @@
+// this helps pull in the built-in methods for components that React has *important this is where you can get lifecycle methods from.
 import React, { Component } from 'react'
 
 
