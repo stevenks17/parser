@@ -1,7 +1,14 @@
+// this helps pull in the built-in methods for components that React has *important this is where you can get lifecycle methods from.
 import React, { Component } from 'react'
+
+// importing local components
 import Graph from '../components/Graph'
 import InteractButton from '../components/InteractButton'
 import DropdownInput from '../components/DropdownInput'
+
+// import to use state data
+import { connect } from 'react-redux'
+
 
 class Home extends Component {
 
@@ -10,11 +17,12 @@ class Home extends Component {
             <div>
                 <Row>
                     <Col>
+                    /* This should render forms so graphs are loaded to dashboard and then clears the dashboard */
                     <DropdownInput />
                     </Col>
                 </Row>
 
-
+                /* Iterate through charts that have loaded and render the graph component and buttons for each passing down a specific graph as a prop */
                 <Row>
                     {this.props.graphs.map((graph) => {
 
@@ -35,7 +43,7 @@ class Home extends Component {
 
 }
 
-
+// this maps graph data to props to be accessed with this.props.graphs //
 const mapStateToProps = state => {
     return {
         graphs: state.graphs
