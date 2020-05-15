@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Card from 'react-bootstrap/Card'
 
-
+// this can be considered a stateless component since its not connected to redux store. Data is being passed down from parent.
 class Graph extends Component {
     render () {
         return (
