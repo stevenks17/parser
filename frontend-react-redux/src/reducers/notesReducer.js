@@ -4,7 +4,7 @@ export default function notesReducer(state = [], action) {
     case 'START_FETCH_NOTES_REQUEST':
         return state
     // add results to array
-    case 'FETCH_NOTICES':
+    case 'FETCH_NOTES':
         return[...state, ...action.notes]
 
 
@@ -21,7 +21,7 @@ export default function notesReducer(state = [], action) {
     case 'START_DELETE_NOTE_REQUEST':
         return state
     // go through state notes check for deleted notes so they arent re-rendered
-    case 'DELETE_NOTICE':
+    case 'DELETE_NOTE':
         let remainingNotes = state.map(note => {
             if (note.id === action.note_id) {
                 return action.note_id
