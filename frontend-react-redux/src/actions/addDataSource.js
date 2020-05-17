@@ -14,11 +14,11 @@ export const addDataSource = (dataSource) => {
             body: JSON.stringify(dataSource)
         };
 
-        fetch(`http://localhost:3000/charts`, configObj)
+        fetch(`http://localhost:3000/graphs`, configObj)
         .then(function(response) {
             return response.json()
         })
-        // dispatches action.type and data object to charts reducer after recieving json response from front end
+        // dispatches action.type and data object to graphs reducer after recieving json response from front end
         .then(data => {
         console.log(data)
             dispatch({ type: 'ADD_DATA_SOURCE', data })})
