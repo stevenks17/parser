@@ -15,9 +15,18 @@ class InteractButton extends Component {
     render() {
         return (
             <Card.Footer>
+                <NavLink 
+                    style={{ marginRight: '10px' }} 
+                    to={`/graphs/${this.props.graph.id}/interact`}
+                    url={this.props.graph.screenshot_url} >
+                    <Button variant="primary" >
+                        Interact
+                    </Button>
+                </NavLink>
+            
                 <NavLink
                     style={{ marginRight: '10px'}}
-                    to={`/graphs/${this.props.graph.id}/interact`}
+                    to={`/graphs/${this.props.graph.id}/speculations`}
                     url={this.props.graph.screenshot_url} >
                         <Button variant="success" >
                             Speculations
