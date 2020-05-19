@@ -17,4 +17,4 @@ class Questions extends Component {
     }
 }
 
-export default connect(null, {deleteQuestion}(Questions))
+export default connect(null, {deleteQuestion})(Questions)

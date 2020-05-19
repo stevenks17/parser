@@ -17,4 +17,4 @@ class Notes extends Component {
     }
 }
 
-export default connect(null, {deleteNote}(Notes))
+export default connect(null, {deleteNote})(Notes)
