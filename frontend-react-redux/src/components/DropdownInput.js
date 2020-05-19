@@ -43,8 +43,8 @@ class DropdownInput extends Component {
 
                 // changing state to remove already added graphs to dashboard
                 this.setState({
-                    graps: this.state.graphs.filter(graph => this.state.graph_url !== `http://localhost:3000/graphs/${graph.id}`),
-                    loadedGraphs: this.state.graphs.filter(graphs => this.state.graph_url === `http://localhost:3000/graphs/${graph.id}`)
+                    graphs: this.state.graphs.filter(graph => this.state.graph_url !== `http://localhost:3000/graphs/${graph.id}`),
+                    loadedGraphs: this.state.graphs.filter(graph => this.state.graph_url === `http://localhost:3000/graphs/${graph.id}`)
                 })
             } else {
                 return "Choose your data source to add to dashboard for comparison"
