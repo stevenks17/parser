@@ -69,7 +69,7 @@ class DropdownInput extends Component {
             <Form onSubmit={event => this.handleDropdownSubmit(event)}>
                 <Form.Group>
                     <Form.Control as="select" size="lg" value={this.state.graph_url} onChange={event => this.handleDropdownChange(event)}>
-                        /* options dynamically populated by iteration of this.state.graphs */
+                        {/* options dynamically populated by iteration of this.state.graphs */}
                         <option value="" >Choose a Graph to load to the dashboard</option>
                         {this.state.graphs.map(graph => <option value={`http://localhost:3000/graphs${graph.id}`} key={graph.id}>{graph.name}</option>)}
                     </Form.Control>
