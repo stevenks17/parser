@@ -9,6 +9,11 @@ import DropdownInput from '../components/DropdownInput'
 // import to use state data
 import { connect } from 'react-redux'
 
+// import styling from bootstrap
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import Card from 'react-bootstrap/Card'
+
 
 class Home extends Component {
 

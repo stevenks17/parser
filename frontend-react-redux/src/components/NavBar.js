@@ -23,7 +23,7 @@ const NavBar = () => {
             <NavLink
                 style={{marginRight: '10px'}}
                 to="/graphs/new">
-                    <Button variant="dark"> Add new a new data source</Button>
+                    <Button variant="dark"> Add a new data source</Button>
             </NavLink>
         </div>
     )
