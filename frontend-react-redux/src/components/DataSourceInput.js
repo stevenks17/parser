@@ -41,7 +41,6 @@ class DataSourceInput extends Component {
 
     handleSave = () => {
         this.props.addDataSource({name: this.state.name, info_url: this.state.info_url, screenshot_url: this.state.screenshot_url})
-        this.props.addQuestion(this.state.question)
         this.setState({
             name: "",
             info_url: "",
