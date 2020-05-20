@@ -5,7 +5,7 @@ export const addDataSource = (dataSource) => {
     return dispatch => {
         dispatch({ type: 'START_ADDING_DATA_SOURCE_REQUEST' })
         
-        let configObj = {
+        let dispatchData = {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -14,7 +14,7 @@ export const addDataSource = (dataSource) => {
             body: JSON.stringify(dataSource)
         };
 
-        fetch(`http://localhost:3000/graphs`, configObj)
+        fetch(`http://localhost:3001/graphs`, dispatchData)
         .then(function(response) {
             return response.json()
         })
