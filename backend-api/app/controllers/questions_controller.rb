@@ -1,12 +1,14 @@
 class QuestionsController < ApplicationController
-    before_action :set_params only: [:show, :destroy]
+    before_action :set_params 
+
 
     def index
-        @questions = @graphs.notes
+        @questions = Question.all
         render json: @questions, status: 200
     end
 
     def show
+        @graph = @graph.questions.find_by(id: params[:id])
         render json: @question
     end
 
@@ -20,6 +22,7 @@ class QuestionsController < ApplicationController
     end
 
     def destroy
+        @question = @graph.questions.find_by(id: params[:id])
         @question.destroy
         render json: {alert:"Question deleted."}
     end
