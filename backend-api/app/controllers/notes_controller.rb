@@ -1,12 +1,15 @@
 class NotesController < ApplicationController
-    before_action :set_params only: [:show, :destroy]
+    before_action :set_params 
+    skip_before_action :verify_authenticity_token
+
 
     def index
-        @notes = @graphs.notes
+        @notes = Note.all
         render json: @notes, status: 200
     end
 
     def show
+        @note = @graph.notes.find_by(id: params[:id])
         render json: @note
     end
 
@@ -20,6 +23,7 @@ class NotesController < ApplicationController
     end
 
     def destroy
+        @note = @graph.notes.find_by(id: params[:id])
         @note.destroy
         render json: {alert:"Note deleted."}
     end
