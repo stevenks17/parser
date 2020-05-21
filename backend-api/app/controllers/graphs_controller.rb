@@ -1,5 +1,7 @@
 class GraphsController < ApplicationController
     before_action :set_params, only: [:show, :destroy]
+    skip_before_action :verify_authenticity_token
+
 
     def index
         @graphs = Graph.all
@@ -7,13 +9,17 @@ class GraphsController < ApplicationController
     end
 
     def show    
-        render json: @graphs, status: 200
+        render json: @graph, status: 200
     end
 
     def create
-        @graph = Graph.create(graph_params)
-        render json: @graph, status: 200
-
+        @graph = Graph.new(graph_params)
+    
+        if @graph.save
+            render json: @graph.to_json(:except => [:updated_at, :created_at])
+        else
+            render json: {error: " Graph could not be saved. "}       
+        end
     end
 
     def destroy
