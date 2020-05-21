@@ -26,7 +26,7 @@ class App extends Component {
                         <Route exact path="/" component={Home} />
                         <Route path= {'/graphs/new'} component={DataSourceInput} />
                         <Route path= {'/graphs/:id/interact'} component={New} />
-                        <Route path= {'/graphs/:id/thoughts'} component={Show} />
+                        <Route path= {'/graphs/:id/speculations'} component={Show} />
 
                     </div>
                 </Container>
