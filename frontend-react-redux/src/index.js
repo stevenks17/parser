@@ -10,10 +10,12 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './index.css'
 import rootReducer from './reducers/rootReducer'
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE || compose
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__|| compose
 const store = createStore(rootReducer, composeEnhancers(
   applyMiddleware(thunk)
 ))
+
+
 
 
 ReactDOM.render(
