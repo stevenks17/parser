@@ -1,9 +1,10 @@
 // url passed as arg to fetch selected graph in dropdown
 export function fetchGraphData(url) {
+
     return (dispatch) => {
         dispatch({type: 'START_ADDING_GRAPHDATA_REQUEST'})
-
         fetch(url)
+
         .then(response => response.json())
         .then(data => {
             console.log(data)
