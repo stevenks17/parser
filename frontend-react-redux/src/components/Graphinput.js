@@ -66,7 +66,7 @@ class GraphInput extends Component {
 
         render () {
             // Need to check current state to base what return should be used for what user interaction has done.
-            const validated= this.state.note.content.length > 20 && this.state.wonder.content.length > 20
+            /*const validated= this.state.note.content.length > 20 && this.state.note.content.length > 20*/
         
             if (this.state.visible === false && this.state.view === false){
                 /// render form and graph
@@ -76,14 +76,14 @@ class GraphInput extends Component {
 
                         <Form onSubmit={event => this.handleSubmit(event)} >
                             <Form.Group>
-                                <Form.Control size="lg" type="text" name="note" placeholders="Make an observation." value={this.state.note.content} onChange={event => this.handleChange(event)} />
+                                <Form.Control size="lg" type="text" name="note" placeholder="Make an observation." value={this.state.note.content} onChange={event => this.handleChange(event)} />
                             </Form.Group>
 
                             <Form.Group>
-                                <Form.Control size="lg" type="text" name="note" placeholders="Add a question" value={this.state.question.content} onChange={event => this.handleChange(event)} />
+                                <Form.Control size="lg" type="text" name="question" placeholder="Ask a question" value={this.state.question.content} onChange={event => this.handleChange(event)} />
                             </Form.Group>
 
-                            <Button disabled={!validated} type="submit" >Add</Button>
+                            <Button  type="submit" >Add</Button>
                         </Form>
                     </div>
 

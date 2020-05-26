@@ -12,10 +12,13 @@ export function fetchGraphData(url) {
                 id: parseInt(data.id),
                 name: data.name,
                 info_url: data.info_url,
-                screenshot_url: data.screenshot_url
+                screenshot_url: data.screenshot_url,
+                
             }
             dispatch({ type: 'ADD_GRAPHDATA', graph })
+
         })
+        
     }
 }
 
