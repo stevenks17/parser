@@ -7,15 +7,16 @@ class Note extends Component {
     render() {
         // conditional to render content using buttons if already saved
         if (this.props.graph) {
-
+            console.log(this.props.note)
             return (
                 <Card className="text-center">
-                    <Card.body>
-                    <Card.Header> Add Observation Notes</Card.Header>
+                    <Card.Body>
+                    <Card.Header>  Observation Notes </Card.Header>
+
                         <Card.Text>
                             {this.props.note.content}
                         </Card.Text>
-                    </Card.body>
+                    </Card.Body>
 
 
                 </Card>
@@ -25,7 +26,7 @@ class Note extends Component {
             return (
                 <Card className="text-center">
                     <Card.Body>
-                        <Card.Header> Add Observation Note </Card.Header>
+                        <Card.Header>  Observation Note </Card.Header>
                         <Card.Title>
                             {this.props.note.content}
                         </Card.Title>

@@ -9,9 +9,10 @@ import { connect } from 'react-redux'
 
 class Questions extends Component {
     render() {
+
         return (
             <div>
-                {(note => <Question question={note} graph={this.props.graph} deleteQuestion={this.props.deleteQuestion}/>)}
+                { this.props.questions.map (question => <Question question={question} graph={this.props.graph} deleteQuestion={this.props.deleteQuestion}/> )}
             </div>
         )
     }
