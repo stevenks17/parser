@@ -27,7 +27,7 @@ class Home extends Component {
                     </Col>
                 </Row>
 
-                {/* Iterate through charts that have loaded and render the graph component and buttons for each passing down a specific graph as a prop */}
+                {/* Iterate through graphs that have loaded and render the graph component and buttons for each passing down a specific graph as a prop */}
                 <Row>
                     {this.props.graphs.map((graph) => {
 
