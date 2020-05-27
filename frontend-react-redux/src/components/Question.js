@@ -5,7 +5,7 @@ import React, { Component } from 'react'
 
 // import styling
 import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Button'
+//import Button from 'react-bootstrap/Button'
 
 class Question extends Component {
     render() {
@@ -21,14 +21,14 @@ class Question extends Component {
                         </Card.Text>
                     </Card.Body>
 
-                    <Card.Footer>
+                    {/*<Card.Footer>
                         <Button
                         size="sm"
                         variant="danger"
                         onClick={(graph_id, question_id) => this.props.deleteQuestion(this.props.graph.id, this.props.question.id)}
                     >X
                     </Button>
-                    </Card.Footer>
+                    </Card.Footer> */}
                 </Card>
             )
         /// only render if this hasnt been saved yet
