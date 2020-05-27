@@ -26,7 +26,7 @@ class New extends Component {
                     <Row>
                         <Col>
                             <Card>
-                                <GraphInput graph_id={graph.id}/>
+                                <GraphInput graph_id={graph.id} />
                             </Card>
                         </Col>
 
