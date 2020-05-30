@@ -1,9 +1,10 @@
 class QuestionsController < ApplicationController
     before_action :set_params 
+    skip_before_action :verify_authenticity_token
 
 
     def index
-        @questions = Question.all
+        @questions = @graph.questions
         render json: @questions, status: 200
     end
 
@@ -30,7 +31,7 @@ class QuestionsController < ApplicationController
     private
 
     def question_params
-        params.require(:note).permit(:content, :graph_id)
+        params.require(:question).permit(:content, :graph_id)
     end
 
     def set_params
