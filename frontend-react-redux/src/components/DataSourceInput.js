@@ -18,6 +18,8 @@ import { connect } from 'react-redux'
 class DataSourceInput extends Component {
     // initial state store and key for visiblity rendering
 
+    
+
     state = {
         name: "",
         info_url: "",
@@ -75,9 +77,22 @@ class DataSourceInput extends Component {
     if (this.state.visible === false) {
         // render form input to new data source
         return (
+            
             <Card>
+
+                 <Card.Header> Search Google for relevant data sources </Card.Header> 
+                   <form method = "get" title = "Search Form" action="https://cse.google.com/cse.js?cx=012056199083638932151:g7nct1fc1mb">
+                        <div>
+                            <div className="gcse-search"></div>
+                        </div>
+                   </form>
+               
+
                 <Card.Header> Add New Data Source</Card.Header>
                 <Form onSubmit={event => this.handleSubmit(event)}>
+
+                   
+
                     <Form.Group>
                         <Form.Control size="lg" type="text" name="name" value={this.state.name} onChange={event => this.handleChange(event)} placeholder="Name of Source" />
                     </Form.Group>
