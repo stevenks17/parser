@@ -11,7 +11,6 @@ class Question extends Component {
     render() {
         // conditional to render content using buttons if saved already
         if (this.props.graph) {
-            console.log(this.props.questions)
             return (
                 <Card className="text-center">
                     <Card.Body>

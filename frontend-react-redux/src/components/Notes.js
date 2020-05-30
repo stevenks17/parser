@@ -8,12 +8,12 @@ import { connect } from 'react-redux'
 
 
 class Notes extends Component {
-// Notes component recieves 2 props graph and notes (array)
+// Notes component recieves 2 props of graph and notes (array)
     render() {
-
+        let allnotes = this.props.notes
         return (
             <div>
-              { this.props.notes.map(note => <Note note={note} graph={this.props.graph} deleteNote={this.props.deleteNote} /> )}
+              { allnotes.map(note => <Note note={note} graph={this.props.graph} deleteNote={this.props.deleteNote} /> )}
             </div>
         )
     }
