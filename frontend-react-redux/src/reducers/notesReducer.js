@@ -13,7 +13,7 @@ export default function notesReducer(state = [], action) {
         return state
         // add new note to state.notes
     case 'ADD_NOTE':
-        return [...state, action.mutateNote]
+        return [...state, action.changedNote]
     
 
 

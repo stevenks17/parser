@@ -13,7 +13,7 @@ export default function questionsReducer(state = [], action) {
         return state
         // add new question to state.questions
     case 'ADD_QUESTION':
-        return [...state, action.mutateQuestion]
+        return [...state, action.changedQuestion]
     
 
 
