@@ -10,7 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './index.css'
 import rootReducer from './reducers/rootReducer'
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__|| compose
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ({trace: true}) || compose 
 const store = createStore(rootReducer, composeEnhancers(
   applyMiddleware(thunk)
 ))
