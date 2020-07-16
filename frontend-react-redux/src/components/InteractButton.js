@@ -12,6 +12,20 @@ import Button from 'react-bootstrap/Button'
 
 // render buttons in navlink in ref to graph.id
 class InteractButton extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            upvotes: 0,
+            show:true
+        }
+    }
+
+    
+
+    incrementvote = () => {
+        this.setState(prevState => ({upvotes: prevState.upvotes +1}))
+    }
+
     render() {
         return (
             <Card.Footer>
@@ -32,6 +46,16 @@ class InteractButton extends Component {
                             Speculations
                         </Button>
                 </NavLink>
+
+                <div>
+                    
+                    <Button
+                        size="sm" 
+                        variant="dark"
+                        style={{marginLeft: '10px'}}
+                        onClick={this.incrementvote}> Reliability Rating: {this.state.upvotes} 
+                    </Button>
+                </div>
             </Card.Footer>
         )
     }

@@ -21,10 +21,11 @@ import { connect } from 'react-redux'
 class Show extends Component {
 
     render() {
+        console.log(this)
     // variables for objects
     const graph = this.props.graphs.find(graph => { return graph.id === parseInt(this.props.match.params.id)})
-    const notes = this.props.notes.filter(note => note.graph.id === graph.id)
-    const questions = this.props.questions.filter(question => question.graph.id === graph.id)
+    const notes = this.props.notes.filter(note => note.graph_id === graph.id)
+    const questions = this.props.questions.filter(question => question.graph_id === graph.id)
 
 
     // if graph exists it loads all corresponding notes and questions with it
