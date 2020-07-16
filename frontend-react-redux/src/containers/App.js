@@ -39,6 +39,7 @@ class App extends Component {
                         <Route path= {'/graphs/:id/interact'} component={New} />
                         <Route path= {'/graphs/:id/speculations'} component={Show} />
 
+
                     </div>
                 </Container>
             </Router>

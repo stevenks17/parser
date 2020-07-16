@@ -5,7 +5,8 @@ import { addNote } from '../actions/addSpeculations'
 import { addQuestion} from '../actions/addSpeculations'
 
 // browser url routing render component as needed
-import { NavLink } from 'react-router-dom'
+import { NavLink  } from 'react-router-dom'
+
 
 // import local components
 import Note from '../components/Note'
@@ -103,7 +104,7 @@ class GraphInput extends Component {
                 return (
                     <NavLink
                         style={{ marginRight: '10px'}, {backgroundColor: 'transparent'}}
-                        to={`/graphs/${this.props.graph_id}/speculations`}
+                        redirect to={`/graphs/${this.props.graph_id}/speculations`}
                         graph={this.props.graph}>
                         <Button size="lg" block>View All Speculation for This Graph</Button>
                     </NavLink>

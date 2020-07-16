@@ -25,7 +25,12 @@ const NavBar = () => {
                 to="/graphs/new">
                     <Button variant="dark"> Add a new data source</Button>
             </NavLink>
+
+          
         </div>
+       
+
+        
     )
 }
 
