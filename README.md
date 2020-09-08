@@ -4,7 +4,7 @@ Parser is a React Web Application for dealing with data set comparison.
 
 ## Demonstration
 
-![Parser Dashboard](https://yt-embed.herokuapp.com/embed?v=PdO2Y28_YkQ&t)
+[![Parser Dashboard](http://i3.ytimg.com/vi/PdO2Y28_YkQ/hqdefault.jpg)]
 
 ## Installation
 
