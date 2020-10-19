@@ -27,7 +27,6 @@ class DataSourceInput extends Component {
           s.parentNode.insertBefore(gcse, s)
         })();
     }
-    
 
     state = {
         name: "",
